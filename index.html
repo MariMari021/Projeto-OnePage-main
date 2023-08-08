@@ -8,15 +8,17 @@
     <title>Comida caseira</title>
     <link rel="stylesheet" href="index.css">
     <link rel="icon" href="Imagens/icone.svg">
+    <link rel="stylesheet" media="screen and (max-width: 768px)" href="smartphone.css">
+    <script src="https://kit.fontawesome.com/a2288264db.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
 
     <!-- INICIO CABEÇALHO -->
-    <heade id="header">
-        <nav class="menu container">
+    <header id="header"><img src="Imagens/logo.png" alt="" class="logo">
+        <nav class="menu container" id="nav-header" >
 
-            <img src="Imagens/logo.png" alt="" class="logo">
+            
             <a href="#header" class="item">HOME</a>
             <a href="#nossaComida" class="item">NOSSA COMIDA</a>
             <a href="#nossaequipe" class="item">NOSSA EQUIPE</a>
@@ -24,7 +26,9 @@
             <a href="#contato" class="item">CONTATO</a>
 
         </nav>
-
+        <a class="menu-barras" onclick="mostrarMenu()">
+            <span id="icone" class="fa-solid fa-bars"></span>
+        </a>
 
         </header>
 
@@ -188,13 +192,9 @@
                         </div>
 
 
-
-
+        
 
                     </div>
-
-
-
 
                         <div class="endereco">
                             <h4 class="endereco-nome">ENDEREÇO</h4>
@@ -210,6 +210,22 @@
             </section>
         </footer>
 
+        <script>   function mostrarMenu(){
+            var menu = document.getElementById("nav-header");
+            var icone = document.getElementById("icone")
+
+            if(getComputedStyle(menu).display == 'none'){
+                menu.style.display = "flex";
+                icone.classList.remove("fa-bars");
+                icone.classList.add("fa-times")
+            }
+
+            else{
+                menu.style.display = "none";
+                icone.classList.remove("fa-times");
+                icone.classList.add("fa-bars");
+            }
+        }</script>
 </body>
 
 </html>

@@ -1,0 +1,24 @@
+.menu {
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    background-color: #ff9966;
+    position: absolute;
+    top: 146px;
+    left: 0px;
+    height: 300px;
+    width: 100%;
+}
+
+.menu-barras {
+    display: flex;
+    z-index: 999;
+
+ 
+}
+
+
+#icone {
+    color: #ff9966f4;;
+    font-size: 30px;
+}
